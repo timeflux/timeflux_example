@@ -13,7 +13,7 @@ class Add(Node):
         o (Port): Default output, provides DataFrame.
 
     Example:
-        .. literalinclude:: /../test/graphs/test.yaml
+        .. literalinclude:: /../../timeflux_example/test/graphs/test.yaml
            :language: yaml
     """
 
@@ -44,7 +44,7 @@ class MatrixAdd(Node):
         o (Port): Default output, provides DataFrame.
 
     Example:
-        .. literalinclude:: /../test/graphs/multi.yaml
+        .. literalinclude:: /../../timeflux_example/test/graphs/multi.yaml
            :language: yaml
     """
 
