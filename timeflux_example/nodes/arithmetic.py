@@ -1,5 +1,6 @@
 """Simple example nodes"""
 
+import logging
 from timeflux.core.node import Node
 
 class Add(Node):
@@ -25,10 +26,12 @@ class Add(Node):
         self._value = value
 
     def update(self):
-        # Copy the input to the output
-        self.o = self.i
-        # Add the value to each cell
-        self.o.data += self._value
+        # Make sure we have a non-empty dataframe
+        if self.i.ready():
+            # Copy the input to the output
+            self.o = self.i
+            # Add the value to each cell
+            self.o.data += self._value
 
 
 class MatrixAdd(Node):
@@ -53,3 +56,21 @@ class MatrixAdd(Node):
 
     def update(self):
         self.o.data = self.i_m1.data + self.i_m2.data
+
+
+class MatrixDivide(Node):
+
+    """Divide one matrix by another.
+
+    Attributes:
+        i_m1 (Port): First matrix, expects DataFrame.
+        i_m2 (Port): Second matrix, expects DataFrame.
+        o (Port): Default output, provides DataFrame.
+
+    """
+
+    def __init__(self):
+        pass
+
+    def update(self):
+        self.o.data = self.i_m1.data.divide(self.i_m2.data)
