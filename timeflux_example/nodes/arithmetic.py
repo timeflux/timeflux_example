@@ -1,6 +1,5 @@
 """Simple example nodes"""
 
-import logging
 from timeflux.core.node import Node
 
 class Add(Node):
