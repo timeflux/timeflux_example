@@ -10,7 +10,7 @@ with open('timeflux_example/__init__.py') as f:
     VERSION = re.search('^__version__\s*=\s*\'(.*)\'', f.read(), re.M).group(1)
 
 setup(
-    name='Timeflux example plugin',
+    name='timeflux-example',
     packages=find_packages(),
     version=VERSION,
     description='An example Timeflux plugin.',
