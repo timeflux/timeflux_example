@@ -1,6 +1,7 @@
 # An example Timeflux plugin
 
-This plugin provides a simple arithmetic node.
+This is an example plugin that provides a simple arithmetic node. Use it as a template
+to develop your own plugins.
 
 ## Installation
 
