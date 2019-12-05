@@ -54,6 +54,10 @@ class MatrixAdd(Node):
         pass
 
     def update(self):
+        # propagate the meta
+        self.o.meta = self.i_m1.meta
+        self.o.meta.update(self.i_m2.meta)
+        # sum the data
         self.o.data = self.i_m1.data + self.i_m2.data
 
 
