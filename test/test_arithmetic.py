@@ -14,7 +14,7 @@ def test_add():
     expected = pd.DataFrame([[2, 2], [2, 2]])
     assert_frame_equal(node.o.data, expected)
 
-def test_matric():
+def test_matrix():
     node = MatrixAdd()
     node.i_m1 = Port()
     node.i_m2 = Port()
