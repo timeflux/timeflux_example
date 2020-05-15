@@ -2,6 +2,7 @@
 
 from timeflux.core.node import Node
 
+
 class Add(Node):
 
     """Adds ``value`` to each cell of the input.

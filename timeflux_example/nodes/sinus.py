@@ -21,7 +21,7 @@ class Sinus(Node):
            :language: yaml
     """
 
-    def __init__(self, amplitude=1, rate=1, name='sinus'):
+    def __init__(self, amplitude=1, rate=1, name="sinus"):
         self._amplitude = amplitude
         self._rate = rate
         self._name = name
@@ -33,6 +33,8 @@ class Sinus(Node):
         if self._start is None:
             self._start = float
 
-        values = [self._amplitude * np.sin(2 * np.pi * self._rate * (float - self._start))]
+        values = [
+            self._amplitude * np.sin(2 * np.pi * self._rate * (float - self._start))
+        ]
         self.o.set(values, names=[self._name])
-        self.o.meta = {'rate': Registry.rate}
+        self.o.meta = {"rate": Registry.rate}
