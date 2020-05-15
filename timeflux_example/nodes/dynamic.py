@@ -20,7 +20,7 @@ class Outputs(Node):
         prefix (string): The prefix to add to each dynamic output.
 
     Example:
-        .. literalinclude:: /../../timeflux_example/examples/dynamic_prefixed.yaml
+        .. literalinclude:: /../examples/dynamic_prefixed.yaml
            :language: yaml
     """
 
@@ -53,7 +53,7 @@ class Inputs(Node):
         prefix (string): The prefix to add to match dynamic inputs.
 
     Example:
-        .. literalinclude:: /../../timeflux_example/examples/dynamic.yaml
+        .. literalinclude:: /../examples/dynamic.yaml
            :language: yaml
     """
 

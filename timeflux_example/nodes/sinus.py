@@ -17,7 +17,7 @@ class Sinus(Node):
         o (Port): Default output, provides DataFrame.
 
     Example:s
-        .. literalinclude:: /../../timeflux_example/examples/sinus.yaml
+        .. literalinclude:: /../examples/sinus.yaml
            :language: yaml
     """
 
