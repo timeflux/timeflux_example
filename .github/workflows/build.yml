@@ -38,4 +38,4 @@ jobs:
     - name: Test code
       run: |
         pip install pytest pytest-cov
-        pytest --cov=$PACKAGE -k "not mne"
+        pytest --cov=$PACKAGE
