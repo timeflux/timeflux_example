@@ -33,11 +33,14 @@ class Sine(Node):
     def update(self):
         now = time.time()
         elapsed = now - self._now
-        self._now = now
         points = int(elapsed * self._resolution) + 1
         cycles = self._frequency * elapsed
         values = np.linspace(self._radian, np.pi * 2 * cycles + self._radian, points)
-        self._radian = values[-1]
         signal = np.sin(values[:-1]) * self._amplitude
-        self.o.set(signal, names=[self._name])
+        timestamps = np.linspace(
+            int(self._now * 1e6), int(now * 1e6), points, False, dtype="datetime64[us]"
+        )[1:]
+        self._now = now
+        self._radian = values[-1]
+        self.o.set(signal, timestamps, names=[self._name])
         self.o.meta = {"rate": self._frequency}
