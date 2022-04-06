@@ -41,4 +41,3 @@ class Sine(Node):
         signal = np.sin(values[:-1]) * self._amplitude
         self.o.set(signal, names=[self._name])
         self.o.meta = {"rate": self._frequency}
-        print(self.o.data)
