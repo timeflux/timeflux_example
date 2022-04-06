@@ -16,9 +16,13 @@ class Sinus(Node):
     Attributes:
         o (Port): Default output, provides DataFrame.
 
-    Example:s
+    Example:
         .. literalinclude:: /../examples/sinus.yaml
            :language: yaml
+
+    .. deprecated::
+        Use :func:`timeflux_example.nodes.signal.Sine` instead.
+
     """
 
     def __init__(self, amplitude=1, rate=1, name="sinus"):
